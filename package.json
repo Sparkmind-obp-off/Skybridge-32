@@ -1,0 +1,34 @@
+{
+  "name": "skybridge-32",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "esbuild src/client.ts --bundle --minify --outfile=public/static/app.js && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests",
+    "test": "vitest run",
+    "test:e2e": "node tests/browser.mjs",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name skybridge-32 --branch main"
+  },
+  "dependencies": {
+    "hono": "^4.10.0"
+  },
+  "devDependencies": {
+    "@hono/vite-cloudflare-pages": "^0.4.2",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.39.0",
+    "fake-indexeddb": "^6.2.0",
+    "playwright": "^1.56.0",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.46.0",
+    "vite": "^6.4.0",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.45.0"
+  },
+  "overrides": {
+    "sharp": "^0.35.5"
+  }
+}
