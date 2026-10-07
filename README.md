@@ -4,9 +4,11 @@ Pendamping lokal persiapan Skybridge Run 2026 untuk **Haidar, BIB #6, 5K, 8 Nove
 
 ## Status & URL
 
-- Implementasi v1.0 selesai; deploy BYOK sedang diverifikasi.
+- Implementasi v1.0 selesai; BYOK Cloudflare Pages aktif dan diverifikasi 7 Oktober 2026.
+- QA browser lengkap juga lulus di URL produksi HTTPS, termasuk penggunaan offline.
 - GitHub: https://github.com/Sparkmind-obp-off/Skybridge-32
-- Produksi: akan diisi setelah Cloudflare Pages berhasil diverifikasi.
+- Produksi: https://skybridge-32.pages.dev
+- Deployment awal: https://984cc0e4.skybridge-32.pages.dev
 - Tech stack: TypeScript, UI DOM ringan, CSS, IndexedDB, service worker. Hono hanya menyajikan HTML app shell; tidak ada API/backend bisnis, akun, layanan eksternal, analytics, atau database server.
 - Semua latihan dan catatan tetap di browser. Hosting tetap menerima permintaan HTTP standar; aplikasi tidak mengirim catatan latihan ke hosting.
 
